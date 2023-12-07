@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    padding: 4rem 0;
+    text-align: center;
+}
+body {
+    transition: background-color 0.5s; /* Animationsübergang für eine sanfte Änderung */
+}
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+}
+div {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 4rem;
+    border: 2px solid black;
+}
+div:hover{
+    box-shadow: 0 0 12px 0 black;
+}
+#div1 {
+    background: linear-gradient(45deg, green 0 50%, purple 50% 100%);
+}
+#div2 {
+    background: linear-gradient(45deg, grey 0 50%, yellow 50% 100%);
+}
+#div3 {
+    background: linear-gradient(45deg, black 0 50%, orange 50% 100%);
+}
+#div4 {
+    background: linear-gradient(45deg, blue 0 50%, mediumaquamarine 50% 100%);
+}
+
