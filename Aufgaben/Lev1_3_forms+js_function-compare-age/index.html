@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lev1_3_forms+js_function-compare-age</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <form onsubmit="getDiff(); return false">
+        <div class="div__age">
+            <label for="age">Alter 1</label>
+            <input type="number" name="age1" id="age1">
+        </div>
+        <div class="div__age">
+            <label for="age">Alter 2</label>
+            <input type="number" name="age2" id="age2">
+        </div>
+        <input type="submit" value="Berechne">
+        <!-- <button type="button" onclick="getDiff()">Berechne!</button> -->
+        <p id="output"></p>
+    </form>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
