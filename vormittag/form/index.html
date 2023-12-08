@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+            </div>
+            <img onclick="getDark()" src="./assets/img/darkLight.png" alt="icon">
+        </nav>
+    </header>
+    <main>
+        <section>
+            <form action="#" onsubmit="getInputValue(); return false">
+                <label for="textid">Name</label>
+                <input type="text" id="textId" class="name">
+                <br>
+                <label for="num">Age</label>
+                <input type="number" name="" id="num" class="num">
+                <label for="range">Range</label>
+                <input type="range" name="" id="range" class="range" max="50" min="0">
+                <br />
+                <label for="checkbox">Are you happy?</label>
+                <input type="checkbox" name="" id="checkbox" class="checkbox">
+                <label for="bday">Bday</label>
+                <input type="date" name="" id="bday" class="bday">
+                <br>
+                <input type="submit" value="Abschicken">
+            </form>
+            <p class="output"></p>
+        </section>
+        <section>
+            <h2 class="myAdd" onclick="addClass()">ADD CLASS</h2>
+            <h3 class="remove" onclick="removeClass()">REMOVE CLASS</h3>
+        </section>
+    </main>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
