@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditional Statments if else</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+
+    <section class="counter">
+        <h2 class="output">0</h2>
+        <div class="flex-container">
+            <div class="flex-div-container">
+                <button onclick="superFunc(+1)" class="input">+1</button>
+                <button onclick="superFunc(-1)">-1</button>
+            </div>
+            <div class="flex-div-container">
+                <button onclick="superFunc(+10)">+10</button>
+                <button onclick="superFunc(-10)">-10</button>
+            </div>
+            <button onclick="superFuncZwei()">*2</button>
+            <button onclick="reset()" class="reset">reset</button>
+        </div>
+    </section>
+
+    <!-- ! Conditional Statements -->
+
+    <div class="reichSein">
+        <label for="reichSein">Werde ich rein?</label>
+        <select name="" id="reich">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+        <button onclick="reichSein()">Klick</button>
+        <p id="entscheidung"></p>
+    </div>
+
+    <!-- <div class="ageCheck">
+        <div>
+            <input type="number" id="ageInput" required>
+            <button onclick="checkAge()">Check</button>
+        </div>
+        <p id="message"></p>
+    </div> -->
+    <div class="ageCheck">
+        <div>
+            <input type="number" id="ageInput" required placeholder="Gib dein Alter an.">
+            <input type="checkbox" name="" id="checked">
+            <button onclick="checkAge()">Check</button>
+        </div>
+        <p id="message"></p>
+    </div>
+
+    <section class="login">
+        <form onsubmit="checkUserData(); return false">
+        <label for="username">Username</label>
+        <input type="text" id="username" required placeholder="Username">
+
+        <label for="password">Password:</label>
+        <input type="password" name="" id="password" required placeholder="Password">
+
+        <input type="submit" value="Login">
+        <div class="login-output"></div>
+    </form>
+    </section>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
