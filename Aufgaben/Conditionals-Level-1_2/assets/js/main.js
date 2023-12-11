@@ -9,7 +9,7 @@ function checkWeather() {
         output.innerHTML = "gut";
     } else if (number >= 3 && number <= 5) {
         output.innerHTML = "okay";
-    } else if (number <= 2) {
+    } else if (number <= 2 && number >= 0) {
         output.innerHTML = "schlecht";
     } else {
         output.innerHTML = "Sie haben eine ungültige Zahl eingegeben!"
