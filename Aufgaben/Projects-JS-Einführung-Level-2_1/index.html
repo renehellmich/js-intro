@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects-JS-Einführung-Level-2_1</title>
+    <style>
+        body {
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 160px;
+            background-color: aqua;
+        }
+        .form {
+            margin: 0 auto;
+            width: 640px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            background-color: white;
+            border-radius: 16px;
+            padding: 16px;
+        }
+        button {
+            width:min-content;
+            margin: 0 auto;
+        }
+        #error {
+            visibility: hidden;
+        }
+        #ouput {
+            font-size: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="#" onsubmit="sendMessage(); return false" class="form">
+        <h1>Welche Nachricht möchtest du weitergeben?</h1>
+        <input type="text" name="message" id="message">
+        <button type="submit">Senden</button>
+        <div>
+            <p id="error"></p>
+            <h2>Letzte Nachricht:</h2>
+        </div>
+        <p id="output"></p>
+    </form>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
