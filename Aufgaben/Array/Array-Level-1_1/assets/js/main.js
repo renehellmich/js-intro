@@ -62,3 +62,20 @@ console.log(favoriteFood);
 let popFavoriteFood = favoriteFood.pop();
 console.log(popFavoriteFood);
 console.log(favoriteFood);
+
+console.log("====== 1 - 6 ======");
+
+console.log(person);
+let shiftPerson = person.shift();
+console.log(shiftPerson);
+console.log(person);
+
+console.log(friends);
+let shiftFriends = friends.shift();
+console.log(shiftFriends);
+console.log(friends);
+
+console.log(favoriteFood);
+let shiftFavoriteFood = favoriteFood.shift();
+console.log(shiftFavoriteFood);
+console.log(favoriteFood);
