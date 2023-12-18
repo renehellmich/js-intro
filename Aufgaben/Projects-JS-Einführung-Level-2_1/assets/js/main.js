@@ -1,8 +1,8 @@
-const output = document.querySelector("#output");
-const error = document.querySelector("#error");
 
 function sendMessage() {
     const input = document.querySelector("#message").value;
+    const output = document.querySelector("#output");
+    const error = document.querySelector("#error");
 
     let check =
         input != ""
