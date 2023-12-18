@@ -79,3 +79,15 @@ console.log(favoriteFood);
 let shiftFavoriteFood = favoriteFood.shift();
 console.log(shiftFavoriteFood);
 console.log(favoriteFood);
+
+console.log("====== 1 - 7 ======");
+
+friends.unshift("Farid");
+console.log(friends);
+friends.unshift("Julia", "Lea");
+console.log(friends);
+
+favoriteFood.unshift("Burger");
+console.log(favoriteFood);
+favoriteFood.unshift("Leberkäse", "Spinat");
+console.log(favoriteFood);
