@@ -91,3 +91,56 @@ favoriteFood.unshift("Burger");
 console.log(favoriteFood);
 favoriteFood.unshift("Leberkäse", "Spinat");
 console.log(favoriteFood);
+
+console.log("====== 1 - 9 ======");
+
+let numArr = [23, 54, 75];
+let zaehler = 0;
+
+// * === FUNKTIONEN === * //
+
+const push = (i) => {
+    for(j = 1; j <= i; j++) {
+        numArr.push(randomNumber100())
+    }
+}
+
+const unshift = (i) => {
+    for(j = 1; j <= i; j++) {
+        numArr.push(randomNumber100())
+    }
+}
+
+const pop = (i) => {
+    for(j = 1; j <= i; j++) {
+        numArr.pop();
+    }
+}
+
+const shift = (i) => {
+    for(j = 1; j <= i; j++) {
+        numArr.shift();
+    }
+}
+
+const randomNumber100 = () => {
+    let zahl = 0;
+    zahl = Math.floor(Math.random() * 100) + 1;
+    return zahl;
+}
+
+
+// * === AUFRUFE und AUSGABE === * //
+push(5);
+console.log(numArr);
+
+unshift(5);
+console.log(numArr);
+
+pop(2);
+console.log(numArr);
+
+shift(2);
+console.log(numArr);
+
+// * === Edit: for schleife korrigiert. Einer immer zu viel durch Programmierfehler! 
