@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops-Level-3_4</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input[type='number'], select {
+            width: min-content;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="#" onsubmit="calcValue(); return false">
+        <h1>Gib mir eine Zahl</h1>
+        <p>Ich werde ALLE Zahlen bis zu dieser Zahl addieren, <br> wenn sie durch die ausgewählten Zahlen teilbar sind.</p>
+        <label for="inputNum">Maximale Zahl</label>
+        <input type="number" name="inputNum" id="inputNum">
+        <label for="firstNum">Erste Zahl</label>
+        <select name="firstNum" id="firstNum"></select>
+        <label for="secondNum">Zweite Zahl</label>
+        <div>
+            <select name="secondNum" id="secondNum"></select>
+            <input type="submit" value="Count Me">
+        </div>
+        <p id="output"></p>
+    </form>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
