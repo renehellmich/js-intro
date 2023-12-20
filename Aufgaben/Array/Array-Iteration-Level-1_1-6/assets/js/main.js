@@ -125,15 +125,27 @@ let album = [
     "DOGATBEACH.jpg",
 ]
 
-let cutString = (string) => {
-    let output = string.replace(".jpg", "");
-    return output.toLowerCase();
-}
-album.forEach((string, position) => {
-    string.match(".jpg")
-    ? album.splice(position, 1, cutString(string))
-    : album.splice(position, 1, "invalid")
+// let cutString = (string) => {
+//     let outputArr = string.split(".");
+//     let output = outputArr[0]
+//     return output.toLowerCase();
+// }
+// album.forEach((string, position) => {
+//     string.includes(".")
+//     ? album.splice(position, 1, cutString(string))
+//     : album.splice(position, 1, "invalid")
+// });
+
+
+// console.log(album);
+
+let newArr = [];
+album.forEach((value, position) => {
+    if (value.includes(".")){
+        newArr[position] = value.toLowerCase().split(".")[0];
+    } else {
+        newArr[position] = "invalid";
+    }
 });
 
-
-console.log(album);
+console.log(newArr);
