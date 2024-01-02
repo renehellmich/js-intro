@@ -36,41 +36,46 @@ console.log("ForEach: ", edelMetallVeraenderung);
 
 console.log(Object.values(edelMetallPreise).filter(e => e.preiseGramEuro > 50));
 
-const myTbl = document.createElement("table")
-document.body.appendChild(myTbl)
+const Object2_1 = () => {
 
-myTbl.style.border = "1px solid black"
-myTbl.style.borderCollapse = "collapse"
+    const myTbl = document.createElement("table")
+    document.body.appendChild(myTbl)
 
-const headerRow = myTbl.insertRow(0);
-const headerCell1 = headerRow.insertCell(0);
-const headerCell2 = headerRow.insertCell(1);
-const headerCell3 = headerRow.insertCell(2);
+    myTbl.style.border = "1px solid black"
+    myTbl.style.borderCollapse = "collapse"
 
-headerCell1.style.border = "2px double black";
-headerCell2.style.border = "2px double black";
-headerCell3.style.border = "2px double black";
+    const headerRow = myTbl.insertRow(0);
+    const headerCell1 = headerRow.insertCell(0);
+    const headerCell2 = headerRow.insertCell(1);
+    const headerCell3 = headerRow.insertCell(2);
 
-headerCell1.innerHTML = "Name";
-headerCell2.innerHTML = "Preis pro Gramm (Euro)";
-headerCell3.innerHTML = "Veränderung";
+    headerCell1.style.border = "2px double black";
+    headerCell2.style.border = "2px double black";
+    headerCell3.style.border = "2px double black";
 
-// Füge Datenzeilen hinzu
-for (let i = 0; i < edelMetallName.length; i++) {
-    const row = myTbl.insertRow(-1); // -1 fügt eine Zeile am Ende der Tabelle ein
+    headerCell1.innerHTML = "Name";
+    headerCell2.innerHTML = "Preis pro Gramm (Euro)";
+    headerCell3.innerHTML = "Veränderung";
 
-    const cell1 = row.insertCell(0);
-    const cell2 = row.insertCell(1);
-    const cell3 = row.insertCell(2);
 
-    cell1.style.border = "2px double black";
-    cell2.style.border = "2px double black";
-    cell3.style.border = "2px double black";
+    for (let i = 0; i < edelMetallName.length; i++) {
+        const row = myTbl.insertRow(-1);
 
-    cell1.innerHTML = edelMetallName[i];
-    cell2.innerHTML = edelMetallGramEuro[i];
-    cell3.innerHTML = edelMetallVeraenderung[i];
+        const cell1 = row.insertCell(0);
+        const cell2 = row.insertCell(1);
+        const cell3 = row.insertCell(2);
+
+        cell1.style.border = "2px double black";
+        cell2.style.border = "2px double black";
+        cell3.style.border = "2px double black";
+
+        cell1.innerHTML = edelMetallName[i];
+        cell2.innerHTML = edelMetallGramEuro[i];
+        cell3.innerHTML = edelMetallVeraenderung[i];
+    }
 }
+
+Object2_1();
 
 // Object 2 - 2
 console.log("=== object 2 - 2 ===");
@@ -87,10 +92,10 @@ const singers = [
 ];
 
 singersArray = Object.values(singers)
-singersArray.sort((a,b) => {
-    if (a.name < b.name){
+singersArray.sort((a, b) => {
+    if (a.name < b.name) {
         return -1;
-    } else if(a.name > b.name) {
+    } else if (a.name > b.name) {
         return 1;
     }
     return 0
@@ -101,45 +106,204 @@ console.log(singersArray);
 //Object 2 - 3
 console.log("=== object 2 - 3 ===");
 
-const divTable = document.querySelector("#table-container")
-const myTbl2_4 = document.createElement("table")
-divTable.appendChild(myTbl2_4)
+const Object2_3 = () => {
 
-const tblHeaderRow = myTbl2_4.insertRow(0)
-const firstCell = tblHeaderRow.insertCell(0)
-const secondCell = tblHeaderRow.insertCell(1)
-const thirdCell = tblHeaderRow.insertCell(2)
-const fourthCell = tblHeaderRow.insertCell(3)
+    const divTable = document.querySelector("#table-container")
+    const myTbl2_4 = document.createElement("table")
+    divTable.appendChild(myTbl2_4)
 
-firstCell.innerHTML = "Name"
-firstCell.style.fontWeight = "bold"
-firstCell.style.textAlign = "center"
+    const tblHeaderRow = myTbl2_4.insertRow(0)
+    const firstCell = tblHeaderRow.insertCell(0)
+    const secondCell = tblHeaderRow.insertCell(1)
+    const thirdCell = tblHeaderRow.insertCell(2)
+    const fourthCell = tblHeaderRow.insertCell(3)
 
-secondCell.innerHTML = "Country"
-secondCell.style.fontWeight = "bold"
-secondCell.style.textAlign = "center"
+    firstCell.innerHTML = "Name"
+    firstCell.style.fontWeight = "bold"
+    firstCell.style.textAlign = "center"
 
-thirdCell.innerHTML = "Period Active"
-thirdCell.style.fontWeight = "bold"
-thirdCell.style.textAlign = "center"
+    secondCell.innerHTML = "Country"
+    secondCell.style.fontWeight = "bold"
+    secondCell.style.textAlign = "center"
 
-fourthCell.innerHTML = "Genre"
-fourthCell.style.fontWeight = "bold"
-fourthCell.style.textAlign = "center"
+    thirdCell.innerHTML = "Period Active"
+    thirdCell.style.fontWeight = "bold"
+    thirdCell.style.textAlign = "center"
 
-singers.forEach((e) => {
-    const row = myTbl2_4.insertRow(-1)
+    fourthCell.innerHTML = "Genre"
+    fourthCell.style.fontWeight = "bold"
+    fourthCell.style.textAlign = "center"
 
-    const cell1 = row.insertCell(0)
-    const cell2 = row.insertCell(1)
-    const cell3 = row.insertCell(2)
-    const cell4 = row.insertCell(3)
+    singers.forEach((e) => {
+        const row = myTbl2_4.insertRow(-1)
 
-    // console.log(Object.values(e.period_active).join().replace(",", " - "));
+        const cell1 = row.insertCell(0)
+        const cell2 = row.insertCell(1)
+        const cell3 = row.insertCell(2)
+        const cell4 = row.insertCell(3)
 
-    cell1.innerHTML = e.name
-    cell2.innerHTML = e.country
-    cell3.innerHTML = Object.values(e.period_active).join().replace(",", " - ")
-    cell4.innerHTML = e.genre
-});
+        // console.log(Object.values(e.period_active).join().replace(",", " - "));
 
+        cell1.innerHTML = e.name
+        cell2.innerHTML = e.country
+        cell3.innerHTML = Object.values(e.period_active).join().replace(",", " - ")
+        cell4.innerHTML = e.genre
+    });
+}
+
+Object2_3();
+
+// 2 - 4
+console.log("==== object 2 - 4 ====");
+
+const buttonName = document.querySelector("#buttonName")
+const buttonCountry = document.querySelector("#buttonCountry")
+const buttonArt = document.querySelector("#buttonArt")
+
+const myTbl = document.createElement("table")
+const divTable = document.querySelector("#sortTable")
+
+const Object2_4 = () => {
+    divTable.appendChild(myTbl)
+
+    const tblHeaderRow = myTbl.insertRow(0)
+    const firstCell = tblHeaderRow.insertCell(0)
+    const secondCell = tblHeaderRow.insertCell(1)
+    const thirdCell = tblHeaderRow.insertCell(2)
+    const fourthCell = tblHeaderRow.insertCell(3)
+
+    firstCell.innerHTML = "Name"
+    firstCell.style.fontWeight = "bold"
+    firstCell.style.textAlign = "center"
+
+    secondCell.innerHTML = "Country"
+    secondCell.style.fontWeight = "bold"
+    secondCell.style.textAlign = "center"
+
+    thirdCell.innerHTML = "Period Active"
+    thirdCell.style.fontWeight = "bold"
+    thirdCell.style.textAlign = "center"
+
+    fourthCell.innerHTML = "Genre"
+    fourthCell.style.fontWeight = "bold"
+    fourthCell.style.textAlign = "center"
+
+}
+
+Object2_4();
+
+const sortByName = () => {
+
+    for (let i = 1; i < myTbl.rows.length; i++) {
+        for (let j = myTbl.rows[i].cells.length - 1; j >= 0; j--) {
+            myTbl.rows[i].deleteCell(j);
+        }
+    }
+
+    let arr = Object.values(singers)
+    arr.sort((a,b) => {
+        if (a.name < b.name) {
+            return -1
+        } else if (a.name > b.name) {
+            return 1
+        }
+        return 0
+    })
+
+    arr.forEach((e) => {
+        const row = myTbl.insertRow(-1)
+
+        const cell1 = row.insertCell(0)
+        const cell2 = row.insertCell(1)
+        const cell3 = row.insertCell(2)
+        const cell4 = row.insertCell(3)
+
+        // console.log(Object.values(e.period_active).join().replace(",", " - "));
+
+        cell1.innerHTML = e.name
+        cell2.innerHTML = e.country
+        cell3.innerHTML = Object.values(e.period_active).join().replace(",", " - ")
+        cell4.innerHTML = e.genre
+    });
+
+}
+
+const sortByCountry = () => {
+    console.log(myTbl.rows.length);
+    
+    for (let i = 1; i < myTbl.rows.length; i++) {
+        for (let j = myTbl.rows[i].cells.length - 1; j >= 0; j--) {
+            myTbl.rows[i].deleteCell(j);
+        }
+    }
+
+    let arr = Object.values(singers)
+    arr.sort((a,b) => {
+        if (a.country < b.country) {
+            return -1
+        } else if (a.country > b.country) {
+            return 1
+        }
+        return 0
+    })
+
+    arr.forEach((e) => {
+        const row = myTbl.insertRow(-1)
+
+        const cell1 = row.insertCell(0)
+        const cell2 = row.insertCell(1)
+        const cell3 = row.insertCell(2)
+        const cell4 = row.insertCell(3)
+
+        // console.log(Object.values(e.period_active).join().replace(",", " - "));
+
+        cell1.innerHTML = e.name
+        cell2.innerHTML = e.country
+        cell3.innerHTML = Object.values(e.period_active).join().replace(",", " - ")
+        cell4.innerHTML = e.genre
+    });
+
+
+}
+
+const sortByArt = () => {
+
+    for (let i = 0; i < myTbl.rows.length; i++) {
+        for (let j = myTbl.rows[i].cells.length - 1; j >= 0; j--) {
+            myTbl.rows[i].deleteCell(j);
+        }
+    }
+
+    let arr = Object.values(singers)
+    /*
+    arr.sort((a,b) => {
+        if (a.genre < b.genre) {
+            return -1
+        } else if (a.genre > b.genre) {
+            return 1
+        }
+        return 0
+    })
+*/
+    console.log(arr.map(e => e.genre));
+
+    arr.forEach((e) => {
+        const row = myTbl.insertRow(-1)
+
+        const cell1 = row.insertCell(0)
+        const cell2 = row.insertCell(1)
+        const cell3 = row.insertCell(2)
+        const cell4 = row.insertCell(3)
+
+        // console.log(Object.values(e.period_active).join().replace(",", " - "));
+
+        cell1.innerHTML = e.name
+        cell2.innerHTML = e.country
+        cell3.innerHTML = Object.values(e.period_active).join().replace(",", " - ")
+        cell4.innerHTML = e.genre
+    });
+}
+
+buttonName.addEventListener("click", () => sortByName())
+buttonCountry.addEventListener("click", () => sortByCountry())
+buttonArt.addEventListener("click", () => sortByArt())
