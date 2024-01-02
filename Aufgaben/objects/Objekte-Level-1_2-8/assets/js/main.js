@@ -94,7 +94,7 @@ let myMusic = [
     }
 ];
 
-myMusic.push( {
+myMusic.push({
     kunstler: "Xandria",
     title: "Nightfall",
     release_jahr: 2015,
@@ -113,4 +113,19 @@ console.log(myMusic.find(x => x.kunstler = "Metallica").formate[2]);
 console.log(myMusic[3].title.split(" ")[4]);
 console.log(myMusic[2].title.slice(myMusic[2].title.length - 2, myMusic[2].title.length));
 console.log(myMusic[1].kunstler.slice(5));
+
+
+// 1 - 7
+console.log("=== Objects 1 - 7 ===");
+
+myMusic
+    .filter(x => x.release_jahr > 1975)
+    .forEach((element) => {
+
+        console.log(element.kunstler);
+        console.log(element.title);
+        console.log(element.formate.join());
+        console.log("");
+
+    })
 
