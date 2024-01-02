@@ -60,3 +60,57 @@ let unserLager = {
 console.log(unserLager.schrank["Obere Schublade"].Ordner2);
 console.log(unserLager.schreibtisch["schublade"]);
 console.log(unserLager.schrank["Untere Schublade"]);
+
+// 1 - 6
+console.log("=== Objects 1 - 6 ===");
+let myMusic = [
+    {
+        kunstler: "The Beatles",
+        title: "Abbey Road",
+        release_jahr: 1969,
+        formate: ["LP", "CD", "MC", "Download"],
+        gold: true
+    },
+    {
+        kunstler: "Pink Floyd",
+        title: "Dark Side of the Moon",
+        release_jahr: 1978,
+        formate: ["CS", "CD", "LP", "Download"],
+        gold: true
+    },
+    {
+        kunstler: "Led Zeppelin",
+        title: "Led Zeppelin IV",
+        release_jahr: 1971,
+        formate: ["CS", "LP", "Download"],
+        gold: true
+    },
+    {
+        kunstler: "Metallica",
+        title: "Kill ’Em All und Ride the Lightning",
+        release_jahr: 1983,
+        formate: ["LP", "CD", "MC", "Download"],
+        gold: true
+    }
+];
+
+myMusic.push( {
+    kunstler: "Xandria",
+    title: "Nightfall",
+    release_jahr: 2015,
+    formate: ["rock", "metal"],
+    gold: true
+})
+
+console.log(myMusic);
+console.log(Object.entries(myMusic));
+
+console.log(myMusic[0].kunstler);
+console.log(myMusic[1].formate[3]);
+console.log(myMusic[1].gold);
+console.log(myMusic.find(x => x.release_jahr == 1971).release_jahr + " und " + myMusic.find(x => x.release_jahr = 1973).release_jahr);
+console.log(myMusic.find(x => x.kunstler = "Metallica").formate[2]);
+console.log(myMusic[3].title.split(" ")[4]);
+console.log(myMusic[2].title.slice(myMusic[2].title.length - 2, myMusic[2].title.length));
+console.log(myMusic[1].kunstler.slice(5));
+
