@@ -98,3 +98,48 @@ singersArray.sort((a,b) => {
 
 console.log(singersArray);
 
+//Object 2 - 3
+console.log("=== object 2 - 3 ===");
+
+const divTable = document.querySelector("#table-container")
+const myTbl2_4 = document.createElement("table")
+divTable.appendChild(myTbl2_4)
+
+const tblHeaderRow = myTbl2_4.insertRow(0)
+const firstCell = tblHeaderRow.insertCell(0)
+const secondCell = tblHeaderRow.insertCell(1)
+const thirdCell = tblHeaderRow.insertCell(2)
+const fourthCell = tblHeaderRow.insertCell(3)
+
+firstCell.innerHTML = "Name"
+firstCell.style.fontWeight = "bold"
+firstCell.style.textAlign = "center"
+
+secondCell.innerHTML = "Country"
+secondCell.style.fontWeight = "bold"
+secondCell.style.textAlign = "center"
+
+thirdCell.innerHTML = "Period Active"
+thirdCell.style.fontWeight = "bold"
+thirdCell.style.textAlign = "center"
+
+fourthCell.innerHTML = "Genre"
+fourthCell.style.fontWeight = "bold"
+fourthCell.style.textAlign = "center"
+
+singers.forEach((e) => {
+    const row = myTbl2_4.insertRow(-1)
+
+    const cell1 = row.insertCell(0)
+    const cell2 = row.insertCell(1)
+    const cell3 = row.insertCell(2)
+    const cell4 = row.insertCell(3)
+
+    // console.log(Object.values(e.period_active).join().replace(",", " - "));
+
+    cell1.innerHTML = e.name
+    cell2.innerHTML = e.country
+    cell3.innerHTML = Object.values(e.period_active).join().replace(",", " - ")
+    cell4.innerHTML = e.genre
+});
+
