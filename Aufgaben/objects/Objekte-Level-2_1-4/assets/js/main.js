@@ -249,7 +249,7 @@ const sortByCountry = () => {
 
     arr.forEach((e) => {
         const row = myTbl.insertRow(-1)
-
+        console.log(row);
         const cell1 = row.insertCell(0)
         const cell2 = row.insertCell(1)
         const cell3 = row.insertCell(2)
@@ -267,11 +267,16 @@ const sortByCountry = () => {
 }
 
 const sortByArt = () => {
+    console.log(myTbl.rows.length);
 
-    for (let i = 0; i < myTbl.rows.length; i++) {
+    for (let i = myTbl.rows.length; i >= 0; i--) {
+        myTbl.rows[i].removeChild();
+        /*
         for (let j = myTbl.rows[i].cells.length - 1; j >= 0; j--) {
-            myTbl.rows[i].deleteCell(j);
+            myTbl.rows[i].remove();
+            // console.log(myTbl.rows);
         }
+        */
     }
 
     let arr = Object.values(singers)
