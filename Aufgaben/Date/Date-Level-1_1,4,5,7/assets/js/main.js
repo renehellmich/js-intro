@@ -22,3 +22,32 @@ tageImMonat(1, 2016)
 tageImMonat(2, 2016)
 tageImMonat(2, 2017)
 tageImMonat(12, 2017)
+
+// 1 - 5
+console.log("=== Date 1 - 5 === ");
+
+let list = [
+    "Januar",
+    "Februar",
+    "März",
+    "April",
+    "Mai",
+    "Juni",
+    "Juli",
+    "August",
+    "September",
+    "Oktober",
+    "November",
+    "Dezember"
+];
+
+const monatsName = (date) => {
+    const monthNumber = list[new Date(date).getUTCMonth()]
+    
+    console.log(monthNumber);
+} 
+
+monatsName("2001-3-4")
+monatsName("2019-12-24")
+monatsName("1410-07-15")
+
