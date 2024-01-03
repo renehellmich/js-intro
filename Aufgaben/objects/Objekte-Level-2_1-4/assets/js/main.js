@@ -274,7 +274,7 @@ const sortByArt = () => {
     }
 
     let arr = Object.values(singers)
-    /*
+    
     arr.sort((a,b) => {
         if (a.genre < b.genre) {
             return -1
@@ -283,10 +283,10 @@ const sortByArt = () => {
         }
         return 0
     })
-*/
+
     // console.log(arr.map(e => e.genre));
 
-    /*
+    
     arr.forEach((e) => {
         const row = myTbl.insertRow(-1)
 
@@ -302,7 +302,7 @@ const sortByArt = () => {
         cell3.innerHTML = Object.values(e.period_active).join().replace(",", " - ")
         cell4.innerHTML = e.genre
     });
-    */
+    
 }
 
 buttonName.addEventListener("click", () => sortByName())
