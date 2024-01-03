@@ -26,3 +26,20 @@ let newPerson = {
 };
 //gib das Profil von Anton mit diesem Code im Element mit der "person" aus.
 document.getElementById("person").innerHTML = newPerson.profil();
+
+
+// this 1 - 3
+console.log("=== this 1 - 3 ===");
+
+let personFunction = {
+    fullName: function () {
+        return personObjekt.vorname + " " + personObjekt.nachname;
+    }
+};
+let personObjekt = {
+    vorname: "Anton",
+    nachname: "Fish"
+};
+
+let anzeigeImHTMLDokument = `<p>${personFunction.fullName.call(personObjekt)}</p>`;
+document.getElementById("newPerson").innerHTML = anzeigeImHTMLDokument;
