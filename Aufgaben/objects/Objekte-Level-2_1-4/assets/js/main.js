@@ -194,10 +194,9 @@ Object2_4();
 
 const sortByName = () => {
 
-    for (let i = 1; i < myTbl.rows.length; i++) {
-        for (let j = myTbl.rows[i].cells.length - 1; j >= 0; j--) {
-            myTbl.rows[i].deleteCell(j);
-        }
+    for (let i = myTbl.rows.length - 1; i > 0; i--) {
+        
+        myTbl.deleteRow(i);
     }
 
     let arr = Object.values(singers)
@@ -224,6 +223,7 @@ const sortByName = () => {
         cell2.innerHTML = e.country
         cell3.innerHTML = Object.values(e.period_active).join().replace(",", " - ")
         cell4.innerHTML = e.genre
+        
     });
 
 }
@@ -231,10 +231,9 @@ const sortByName = () => {
 const sortByCountry = () => {
     console.log(myTbl.rows.length);
     
-    for (let i = 1; i < myTbl.rows.length; i++) {
-        for (let j = myTbl.rows[i].cells.length - 1; j >= 0; j--) {
-            myTbl.rows[i].deleteCell(j);
-        }
+    for (let i = myTbl.rows.length - 1; i > 0; i--) {
+        
+        myTbl.deleteRow(i);
     }
 
     let arr = Object.values(singers)
@@ -269,14 +268,9 @@ const sortByCountry = () => {
 const sortByArt = () => {
     console.log(myTbl.rows.length);
 
-    for (let i = myTbl.rows.length; i >= 0; i--) {
-        myTbl.rows[i].removeChild();
-        /*
-        for (let j = myTbl.rows[i].cells.length - 1; j >= 0; j--) {
-            myTbl.rows[i].remove();
-            // console.log(myTbl.rows);
-        }
-        */
+    for (let i = myTbl.rows.length - 1; i > 0; i--) {
+        
+        myTbl.deleteRow(i);
     }
 
     let arr = Object.values(singers)
@@ -290,8 +284,9 @@ const sortByArt = () => {
         return 0
     })
 */
-    console.log(arr.map(e => e.genre));
+    // console.log(arr.map(e => e.genre));
 
+    /*
     arr.forEach((e) => {
         const row = myTbl.insertRow(-1)
 
@@ -307,6 +302,7 @@ const sortByArt = () => {
         cell3.innerHTML = Object.values(e.period_active).join().replace(",", " - ")
         cell4.innerHTML = e.genre
     });
+    */
 }
 
 buttonName.addEventListener("click", () => sortByName())
