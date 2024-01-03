@@ -43,3 +43,18 @@ let personObjekt = {
 
 let anzeigeImHTMLDokument = `<p>${personFunction.fullName.call(personObjekt)}</p>`;
 document.getElementById("newPerson").innerHTML = anzeigeImHTMLDokument;
+
+// this 1 - 4
+console.log("=== this 1 - 4 ===");
+
+function fahrrad() {
+    console.log(this.name);
+}
+
+let name = "Canyon";
+let obj1 = { name: "Merida", fahrrad: fahrrad };
+let obj2 = { name: "Scott", fahrrad: fahrrad };
+
+fahrrad()
+obj1.fahrrad()
+obj2.fahrrad()
