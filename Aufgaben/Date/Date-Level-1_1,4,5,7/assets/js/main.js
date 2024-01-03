@@ -57,7 +57,7 @@ console.log("=== Date 1 - 7 === ");
 
 const tagesunterschied = (option) => {
     const date = new Date(option);
-    console.log(date.getDay());
+    // console.log(date.getDay());
 
     if (date.getDay() > 0 && date.getDay() < 6) {
         console.log("Arbeitstag");
