@@ -51,3 +51,23 @@ monatsName("2001-3-4")
 monatsName("2019-12-24")
 monatsName("1410-07-15")
 
+
+// 1 - 7
+console.log("=== Date 1 - 7 === ");
+
+const tagesunterschied = (option) => {
+    const date = new Date(option);
+    console.log(date.getDay());
+
+    if (date.getDay() > 0 && date.getDay() < 6) {
+        console.log("Arbeitstag");
+    } else {
+        console.log("Weekend");
+    }
+}
+
+tagesunterschied("12.15.2019")
+tagesunterschied("2.16.2001")
+tagesunterschied("2.1.2020")
+tagesunterschied("2.29.2020")
+tagesunterschied("1.3.2024")
