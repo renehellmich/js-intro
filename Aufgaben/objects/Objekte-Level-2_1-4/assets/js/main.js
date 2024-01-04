@@ -301,7 +301,9 @@ const sortByArt = () => {
         cell2.innerHTML = e.country
         cell3.innerHTML = Object.values(e.period_active).join().replace(",", " - ")
         cell4.innerHTML = e.genre
+
     });
+    
     
 }
 
