@@ -17,17 +17,17 @@ const goCat = () => {
     console.log("speed", speed);
     if (posAbs >= 0 && posAbs <= rightBound && direction === "+") {
         direction = "+"
-        posAbs += Number(`${direction}24`)
+        posAbs += Number(`${direction}8`)
         cat.style.left = `${posAbs}px`
     } else if (posAbs < 0 && direction === "-") {
         changeDirection(0)
         direction = "+"
-        posAbs += Number(`${direction}24`)
+        posAbs += Number(`${direction}8`)
         cat.style.left = `${posAbs}px`
     } else {
         changeDirection(180)
         direction = "-"
-        posAbs += Number(`${direction}24`)
+        posAbs += Number(`${direction}8`)
         cat.style.left = `${posAbs}px`
     }
 }
